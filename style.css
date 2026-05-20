@@ -408,22 +408,4 @@
 .conteiner-cart-4,
 .conteiner-cart-6 {
   margin-top: -32px;
-}
-
-.image__1 {
-  position: absolute;
-  top: 770px;
-  left: 25px;
-}
-.image__2 {
-  position: absolute;
-  top: 822px;
-  left: 40px;
-}
-.image__3 {
-  position: absolute;
-  z-index: 0;
-  top: 77px;
-  right: 0px;
-  display: grid;
 }/*# sourceMappingURL=style.css.map */
