@@ -444,3 +444,25 @@
     margin-top: -32px;
 }
 
+.image {
+
+    &__1 {
+        position: absolute;
+        top: 770px;
+        left: 25px;
+    }
+
+    &__2 {
+        position: absolute;
+        top: 822px;
+        left: 40px;
+    }
+
+    &__3 {
+        position: absolute;
+        z-index: 0;
+        top: 77px;
+        right: 0px;
+        display: grid;
+    }
+}
