@@ -47,3 +47,6 @@ alert(user.age);
 alert(user.isAdmin);  
 
 alert("Имя: " + user.name + ", возраст: " + user.age + ", администратор: " + user.isAdmin);
+
+let name = prompt("Введите ваше имя:");
+alert(`Привет, ${name}!`);
