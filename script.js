@@ -16,3 +16,6 @@ alert(x + y);
 alert(x - y);  
 alert(x * y);  
 alert(x / y); 
+
+let result = 2 ** 5;
+alert(result);
