@@ -5,3 +5,6 @@ alert(a);
 
 let firstIPhoneYear = 2007;
 alert(firstIPhoneYear);
+
+let creatorName = "Brendan Eich";
+alert(creatorName);
