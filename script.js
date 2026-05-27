@@ -36,3 +36,14 @@ alert(num);
 
 let age = prompt("Сколько вам лет?");
 alert(age);
+
+let user = {
+    name: "Карлен",     
+    age: 27,              
+    isAdmin: true,        
+};
+alert(user.name);     
+alert(user.age);      
+alert(user.isAdmin);  
+
+alert("Имя: " + user.name + ", возраст: " + user.age + ", администратор: " + user.isAdmin);
