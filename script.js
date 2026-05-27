@@ -24,3 +24,12 @@ let a6 = 9;
 let b6 = 2;
 let result6 = a6 % b6;
 alert(result6);
+
+let num = 1;
+num += 5;
+num -= 3;
+num *= 7;
+num /= 3;
+num++;
+num--;
+alert(num);
