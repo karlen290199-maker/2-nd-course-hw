@@ -19,3 +19,8 @@ alert(x / y);
 
 let result = 2 ** 5;
 alert(result);
+
+let a7 = 9;
+let b7 = 2;
+let result7 = a7 % b7;
+alert(result7);
