@@ -8,3 +8,11 @@ alert(firstIPhoneYear);
 
 let creatorName = "Brendan Eich";
 alert(creatorName);
+
+let x = 10;
+let y = 2;
+
+alert(x + y);  
+alert(x - y);  
+alert(x * y);  
+alert(x / y); 
