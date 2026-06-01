@@ -50,3 +50,12 @@ alert("Имя: " + user.name + ", возраст: " + user.age + ", админи
 
 let name = prompt("Введите ваше имя:");
 alert(`Привет, ${name}!`);
+
+let password = 'пароль';
+let userInput = prompt('Введите пароль');
+
+if (userInput === password) {
+    alert('Пароль введен верно');
+} else {
+    alert('Пароль введен неправильно');
+}
