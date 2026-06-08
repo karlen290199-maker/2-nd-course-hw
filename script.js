@@ -117,3 +117,9 @@ if (monthNumber > 13 || monthNumber < 1) {
 for (let i = 0; i < 2; i++) {
     console.log("Привет");
 }
+
+let i = 1;
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
