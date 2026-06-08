@@ -150,3 +150,11 @@ while (n >= 50) {
 
 console.log("Получившееся число: " + n);
 console.log("Количество итераций: " + num);
+
+let firstFriday = 5; 
+
+const daysInMonth = 31;
+
+for (let date = firstFriday; date <= daysInMonth; date += 7) {
+    console.log(`Сегодня пятница, ${date}-е число. Необходимо подготовить отчет.`);
+}
