@@ -129,3 +129,13 @@ while (o <= 22) {
     console.log(o);
     o++;
 }
+
+let obj = {
+    "Коля": '200',
+    "Вася": '300',
+    "Петя": '400'
+};
+
+for (let name in obj) {
+    console.log(name + " — зарплата " + obj[name] + " долларов");
+}
