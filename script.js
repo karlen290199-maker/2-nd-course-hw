@@ -113,3 +113,7 @@ if (monthNumber > 13 || monthNumber < 1) {
             console.log("Некорректный номер месяца");
     }
 }
+
+for (let i = 0; i < 2; i++) {
+    console.log("Привет");
+}
