@@ -139,3 +139,14 @@ let obj = {
 for (let name in obj) {
     console.log(name + " — зарплата " + obj[name] + " долларов");
 }
+
+let n = 1000;
+num = 0;
+
+while (n >= 50) {
+    n = n / 2;
+    num++;
+}
+
+console.log("Получившееся число: " + n);
+console.log("Количество итераций: " + num);
