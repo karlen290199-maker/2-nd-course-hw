@@ -123,3 +123,9 @@ while (i <= 5) {
     console.log(i);
     i++;
 }
+
+let o = 7;
+while (o <= 22) {
+    console.log(o);
+    o++;
+}
