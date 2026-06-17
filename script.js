@@ -179,3 +179,24 @@ console.log(checkEvenOdd(4));
 console.log(checkEvenOdd(7));  
 console.log(checkEvenOdd(0));  
 console.log(checkEvenOdd(-3)); 
+
+function printSquare(n) {
+    console.log(n * n);
+}
+
+printSquare(5); 
+printSquare(8);  
+printSquare(-3); 
+
+function getSquare(n) {
+    return n * n;
+}
+
+console.log(getSquare(5));  
+console.log(getSquare(8));  
+
+result = getSquare(5);
+console.log(result);  
+
+let sum = getSquare(5) + getSquare(3);
+console.log(sum);  
