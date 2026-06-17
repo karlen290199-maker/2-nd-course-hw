@@ -158,3 +158,11 @@ const daysInMonth = 31;
 for (let date = firstFriday; date <= daysInMonth; date += 7) {
     console.log(`Сегодня пятница, ${date}-е число. Необходимо подготовить отчет.`);
 }
+
+function minOfTwo(a, b) {
+    return a < b ? a : b;
+}
+
+console.log(minOfTwo(8, 4));   
+console.log(minOfTwo(6, 6));   
+console.log(minOfTwo(-3, 7));  
