@@ -72,6 +72,10 @@ a {
   font-weight: 600;
   color: #FFFFFF;
 }
+.header__btn:hover {
+  background-color: #FFFFFF;
+  color: #202027;
+}
 
 .img__2 {
   position: absolute;
@@ -211,6 +215,10 @@ a {
   color: #202027;
 }
 
+.conteiner-cart:hover {
+  transform: scale(1.05);
+}
+
 .conteiner-cart-2 {
   max-width: 378px;
   max-height: 512px;
@@ -251,6 +259,10 @@ a {
   color: #202027;
 }
 
+.conteiner-cart-2:hover {
+  transform: scale(1.05);
+}
+
 .conteiner-cart-3 {
   max-width: 378px;
   max-height: 473px;
@@ -289,6 +301,10 @@ a {
   vertical-align: middle;
   font-weight: 700;
   color: #202027;
+}
+
+.conteiner-cart-3:hover {
+  transform: scale(1.05);
 }
 
 .conteiner-cart-4 {
@@ -335,6 +351,10 @@ a {
   display: block;
 }
 
+.conteiner-cart-4:hover {
+  transform: scale(1.05);
+}
+
 .conteiner-cart-5 {
   max-width: 378px;
   max-height: 512px;
@@ -376,6 +396,10 @@ a {
 }
 .conteiner-cart-5 span {
   display: block;
+}
+
+.conteiner-cart-5:hover {
+  transform: scale(1.05);
 }
 
 .conteiner-cart-6 {
@@ -420,6 +444,10 @@ a {
 }
 .conteiner-cart-6 span {
   display: block;
+}
+
+.conteiner-cart-6:hover {
+  transform: scale(1.05);
 }
 
 .img-info__1 {
@@ -516,6 +544,11 @@ a {
   min-width: 247px;
   min-height: 66px;
   font-size: 24px;
+}
+.mini .games__btn:hover {
+  border: 1px solid #202027;
+  background-color: #FFFFFF;
+  color: #202027;
 }
 .mini .games__img {
   width: 600px;
@@ -731,6 +764,10 @@ a {
     font-size: 16px;
     margin-left: 30px;
   }
+  .header__btn:hover {
+    background-color: #FFFFFF;
+    color: #202027;
+  }
   .img__2 {
     position: absolute;
     top: 97px;
@@ -880,6 +917,11 @@ a {
     font-size: 16px;
     min-width: 285px;
     min-height: 55px;
+  }
+  .mini .games__btn:hover {
+    border: 1px solid #202027;
+    background-color: #FFFFFF;
+    color: #202027;
   }
   .mini .games__cart {
     order: 1;

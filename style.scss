@@ -74,6 +74,11 @@ a {
         font-weight: 600;
         color: #FFFFFF;
     }
+
+    &__btn:hover {
+        background-color: #FFFFFF;
+        color: #202027;
+    } 
 }
 
 .img {
@@ -218,7 +223,8 @@ a {
         color: #202027;
         margin-bottom: 16px;
     }
-&__title {
+
+    &__title {
         padding-left: 32px;
         padding-bottom: 32px;
         font-family: Montserrat;
@@ -230,6 +236,10 @@ a {
         font-weight: 700;
         color: #202027;
     }
+}
+
+.conteiner-cart:hover {
+    transform: scale(1.05);
 }
 
 .conteiner-cart-2 {
@@ -275,6 +285,10 @@ a {
     }
 }
 
+.conteiner-cart-2:hover {
+    transform: scale(1.05);
+}
+
 .conteiner-cart-3 {
     max-width: 378px;
     max-height: 473px;
@@ -316,6 +330,10 @@ a {
         font-weight: 700;
         color: #202027;
     }
+}
+
+.conteiner-cart-3:hover {
+    transform: scale(1.05);
 }
 
 .conteiner-cart-4 {
@@ -366,6 +384,10 @@ a {
     }
 }
 
+.conteiner-cart-4:hover {
+    transform: scale(1.05);
+}
+
 .conteiner-cart-5 {
     max-width: 378px;
     max-height: 512px;
@@ -411,6 +433,10 @@ a {
     & span {
     display: block;
     }
+}
+
+.conteiner-cart-5:hover {
+    transform: scale(1.05);
 }
 
 .conteiner-cart-6 {
@@ -459,6 +485,10 @@ a {
     & span {
         display: block;
     }
+}
+
+.conteiner-cart-6:hover {
+    transform: scale(1.05);
 }
 
 .img-info {
@@ -570,6 +600,12 @@ a {
             min-width: 247px;
             min-height: 66px;
             font-size: 24px;
+        }
+
+        &__btn:hover {
+            border: 1px solid #202027;
+            background-color: #FFFFFF;
+            color: #202027;
         }
 
         &__img {

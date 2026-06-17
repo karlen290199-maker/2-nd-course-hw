@@ -50,6 +50,11 @@
             font-size: 16px;
             margin-left: 30px;
         }
+
+        &__btn:hover {
+            background-color: #FFFFFF;
+            color: #202027;
+        } 
     }
 
     .img {
@@ -235,6 +240,12 @@
                 font-size: 16px;
                 min-width: 285px;
                 min-height: 55px;
+            }
+
+            &__btn:hover {
+                border: 1px solid #202027;
+                background-color: #FFFFFF;
+                color: #202027;
             }
 
             &__cart {
