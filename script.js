@@ -166,3 +166,16 @@ function minOfTwo(a, b) {
 console.log(minOfTwo(8, 4));   
 console.log(minOfTwo(6, 6));   
 console.log(minOfTwo(-3, 7));  
+
+function checkEvenOdd(n) {
+    if (n % 2 === 0) {
+        return 'Число четное';
+    } else {
+        return 'Число нечетное';
+    }
+}
+
+console.log(checkEvenOdd(4));  
+console.log(checkEvenOdd(7));  
+console.log(checkEvenOdd(0));  
+console.log(checkEvenOdd(-3)); 
