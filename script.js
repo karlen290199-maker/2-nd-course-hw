@@ -200,3 +200,17 @@ console.log(result);
 
 let sum = getSquare(5) + getSquare(3);
 console.log(sum);  
+
+function correctAge(age) {
+    age = Number(age);
+    
+    if (age < 0) {
+        return 'Вы ввели неправильное значение';
+    } else if (age >= 0 && age <= 12) {
+        return 'Привет, друг!';
+    } else if (age >= 13) {
+        return 'Добро пожаловать!';
+    }
+}
+
+alert(correctAge(prompt("Сколько вам лет?")));
