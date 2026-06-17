@@ -232,3 +232,17 @@ console.log(multiplyNumbers('10', 2));
 console.log(multiplyNumbers('abc', 5));  
 console.log(multiplyNumbers(7, 'xyz'));  
 console.log(multiplyNumbers('hello', 'world')); 
+
+function cubeNumber() {
+    let input = prompt('Введите число:');
+    let num = Number(input);
+    
+    if (isNaN(num)) {
+        return 'Переданный параметр не является числом';
+    }
+    
+    let cube = num ** 3;
+    return `${num} в кубе равняется ${cube}`;
+}
+
+alert(cubeNumber());
