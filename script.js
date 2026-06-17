@@ -214,3 +214,21 @@ function correctAge(age) {
 }
 
 alert(correctAge(prompt("Сколько вам лет?")));
+
+function multiplyNumbers(a, b) {
+    let num1 = Number(a);
+    let num2 = Number(b);
+    
+    if (isNaN(num1) || isNaN(num2)) {
+        return 'Одно или оба значения не являются числом';
+    }
+    
+    return num1 * num2;
+}
+
+console.log(multiplyNumbers(5, 3));      
+console.log(multiplyNumbers(2.5, 4));    
+console.log(multiplyNumbers('10', 2));   
+console.log(multiplyNumbers('abc', 5));  
+console.log(multiplyNumbers(7, 'xyz'));  
+console.log(multiplyNumbers('hello', 'world')); 
