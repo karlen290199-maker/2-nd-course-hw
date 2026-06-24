@@ -329,14 +329,19 @@ function startQuiz() {
     alert(resultMessage);
 }
 
-const arr = [1, 5, 4, 10, 0, 3];
+const arr1 = [1, 5, 4, 10, 0, 3];
 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-    if (arr[i] === 10) {
+for (let i = 0; i < arr1.length; i++) {
+    console.log(arr1[i]);
+    if (arr1[i] === 10) {
         break;
     }
 }
 
-const index = arr.indexOf(4);
+const arr2 = [1, 5, 4, 10, 0, 3];
+const index = arr2.indexOf(4);
 console.log(index); 
+
+const arr3 = [1, 3, 5, 10, 20];
+const joinedResult = arr3.join(' ');
+console.log(joinedResult); 
