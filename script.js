@@ -435,3 +435,19 @@ const evenNumbers = arr9.filter(num => num % 2 === 0);
 
 console.log('Исходный массив:', arr9);
 console.log('Чётные значения:', evenNumbers);
+
+const arr10 = [];
+for (let i = 0; i < 6; i++) {
+    arr10.push(Math.floor(Math.random() * 10) + 1);
+}
+
+let totalSum = 0;
+for (let i = 0; i < arr10.length; i++) {
+    totalSum += arr10[i];
+}
+
+const average = totalSum / arr10.length;
+
+console.log('Массив:', arr10);
+console.log('Сумма элементов:', totalSum);
+console.log('Среднее арифметическое:', average);
