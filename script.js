@@ -409,3 +409,11 @@ function squareArray(arr) {
 const numbers = [1, 2, 3, 4, 5];
 const squares = squareArray(numbers);
 console.log(squares); 
+
+function getStringLengths(arr) {
+    return arr.map(str => str.length);
+}
+
+const strings = ['hello', 'world', 'JavaScript', 'code'];
+const lengths = getStringLengths(strings);
+console.log(lengths); 
