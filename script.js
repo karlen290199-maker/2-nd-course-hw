@@ -337,3 +337,6 @@ for (let i = 0; i < arr.length; i++) {
         break;
     }
 }
+
+const index = arr.indexOf(4);
+console.log(index); 
