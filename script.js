@@ -369,3 +369,14 @@ const filteredArr = arr5.filter(item => item !== 'a');
 filteredArr.sort((a, b) => a - b);
 
 console.log(filteredArr); 
+
+const arr6 = [9, 8, 7, 6, 5];
+
+const userNumber = prompt('Угадайте число из массива:');
+const number = Number(userNumber);
+
+if (arr6.includes(number)) {
+    alert('Угадал');
+} else {
+    alert('Не угадал');
+}
