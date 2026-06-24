@@ -357,3 +357,7 @@ for (let i = 0; i < 3; i++) {
 }
 
 console.log(matrix); 
+
+const arr4 = [1, 1, 1];
+arr4.push(2, 2, 2);
+console.log(arr4); 
