@@ -361,3 +361,11 @@ console.log(matrix);
 const arr4 = [1, 1, 1];
 arr4.push(2, 2, 2);
 console.log(arr4); 
+
+const arr5 = [9, 8, 7, 'a', 6, 5];
+
+const filteredArr = arr5.filter(item => item !== 'a');
+
+filteredArr.sort((a, b) => a - b);
+
+console.log(filteredArr); 
