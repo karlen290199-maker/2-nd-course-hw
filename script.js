@@ -380,3 +380,7 @@ if (arr6.includes(number)) {
 } else {
     alert('Не угадал');
 }
+
+const str = 'abcdef';
+const reversed = str.split('').reverse().join('');
+console.log(reversed); 
