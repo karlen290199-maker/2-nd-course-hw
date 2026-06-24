@@ -417,3 +417,11 @@ function getStringLengths(arr) {
 const strings = ['hello', 'world', 'JavaScript', 'code'];
 const lengths = getStringLengths(strings);
 console.log(lengths); 
+
+function getNegativeNumbers(arr) {
+    return arr.filter(num => num < 0);
+}
+
+const numbers2 = [3, -5, 7, -2, 0, -8, 10, -1];
+const negatives = getNegativeNumbers(numbers2);
+console.log(negatives); 
