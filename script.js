@@ -345,3 +345,15 @@ console.log(index);
 const arr3 = [1, 3, 5, 10, 20];
 const joinedResult = arr3.join(' ');
 console.log(joinedResult); 
+
+const matrix = [];
+
+for (let i = 0; i < 3; i++) {
+    const row = [];
+    for (let j = 0; j < 3; j++) {
+        row.push(1);
+    }
+    matrix.push(row);
+}
+
+console.log(matrix); 
