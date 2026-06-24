@@ -388,3 +388,16 @@ console.log(reversed);
 const arr7 = [[1, 2, 3], [4, 5, 6]];
 const flatArr = arr7.flat();
 console.log(flatArr); 
+
+
+const arr8 = [];
+for (let i = 0; i < 10; i++) {
+    arr8.push(Math.floor(Math.random() * 10) + 1);
+}
+
+console.log('Массив:', arr8);
+
+for (let i = 0; i < arr8.length - 1; i++) {
+    const sum = arr8[i] + arr8[i + 1];
+    console.log(`${arr8[i]} + ${arr8[i+1]} = ${sum}`);
+}
