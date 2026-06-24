@@ -425,3 +425,13 @@ function getNegativeNumbers(arr) {
 const numbers2 = [3, -5, 7, -2, 0, -8, 10, -1];
 const negatives = getNegativeNumbers(numbers2);
 console.log(negatives); 
+
+const arr9 = [];
+for (let i = 0; i < 10; i++) {
+    arr9.push(Math.floor(Math.random() * 11)); // от 0 до 10 включительно
+}
+
+const evenNumbers = arr9.filter(num => num % 2 === 0);
+
+console.log('Исходный массив:', arr9);
+console.log('Чётные значения:', evenNumbers);
