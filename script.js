@@ -387,4 +387,4 @@ console.log(reversed);
 
 const arr7 = [[1, 2, 3], [4, 5, 6]];
 const flatArr = arr7.flat();
-console.log(flatArr); // [1, 2, 3, 4, 5, 6]
+console.log(flatArr); 
