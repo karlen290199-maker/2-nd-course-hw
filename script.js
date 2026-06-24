@@ -384,3 +384,7 @@ if (arr6.includes(number)) {
 const str = 'abcdef';
 const reversed = str.split('').reverse().join('');
 console.log(reversed); 
+
+const arr7 = [[1, 2, 3], [4, 5, 6]];
+const flatArr = arr7.flat();
+console.log(flatArr); // [1, 2, 3, 4, 5, 6]
