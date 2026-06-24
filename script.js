@@ -401,3 +401,11 @@ for (let i = 0; i < arr8.length - 1; i++) {
     const sum = arr8[i] + arr8[i + 1];
     console.log(`${arr8[i]} + ${arr8[i+1]} = ${sum}`);
 }
+
+function squareArray(arr) {
+    return arr.map(num => num ** 2);
+}
+
+const numbers = [1, 2, 3, 4, 5];
+const squares = squareArray(numbers);
+console.log(squares); 
