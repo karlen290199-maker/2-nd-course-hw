@@ -271,3 +271,60 @@ console.log(circle1.getArea());
 console.log(circle1.getPerimeter()); 
 console.log(circle2.getArea());      
 console.log(circle2.getPerimeter()); 
+
+const quiz = [
+    {
+        question: "Какой цвет небо?",
+        options: ["1. Красный", "2. Синий", "3. Зеленый"],
+        correctAnswer: 2 
+    },
+    {
+        question: "Сколько дней в неделе?",
+        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько у человека пальцев на одной руке?",
+        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+        correctAnswer: 2
+    }
+];
+
+function startQuiz() {
+    let correctCount = 0;
+    const totalQuestions = quiz.length;
+
+    for (let i = 0; i < totalQuestions; i++) {
+        const q = quiz[i];
+        const optionsText = q.options.join('\n');
+        const userInput = prompt(
+            `Вопрос ${i+1} из ${totalQuestions}:\n${q.question}\n\n${optionsText}\n\nВведите номер правильного варианта (1, 2 или 3):`
+        );
+
+        if (userInput === null) {
+            alert('Викторина прервана. Вы нажали "Отмена".');
+            return;
+        }
+
+        const answerNumber = Number(userInput.trim());
+        const isValid = Number.isInteger(answerNumber) && answerNumber >= 1 && answerNumber <= 3;
+
+        if (!isValid) {
+            alert(`Некорректный ввод: "${userInput}". Ожидался номер 1, 2 или 3. Ответ засчитан как неверный.`);
+        } else {
+            if (answerNumber === q.correctAnswer) {
+                correctCount++;
+            }
+        }
+    }
+
+    let resultMessage = `Вы ответили правильно на ${correctCount} из ${totalQuestions} вопросов.`;
+    if (correctCount === totalQuestions) {
+        resultMessage += '\nОтлично! Вы великолепны!';
+    } else if (correctCount >= totalQuestions / 2) {
+        resultMessage += '\nХороший результат!';
+    } else {
+        resultMessage += '\nПопробуйте ещё раз, у вас получится!';
+    }
+    alert(resultMessage);
+}
