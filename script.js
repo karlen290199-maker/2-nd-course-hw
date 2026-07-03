@@ -647,5 +647,11 @@ console.log(getRandomInRange(1, 10));
 console.log(getRandomInRange(5, 15));
 console.log(getRandomInRange(-10, 10));
 
-const currentDate = new Date();
+const currentDate1 = new Date();
 console.log(new Date().toLocaleDateString());
+
+const currentDate2 = new Date();
+const futureDate = new Date(currentDate2);
+futureDate.setDate(currentDate2.getDate() + 73);
+
+console.log(futureDate.toLocaleDateString());
