@@ -615,3 +615,11 @@ const number3 = 32.58884;
 console.log(Math.floor(number3)); 
 console.log(Math.ceil(number3));  
 console.log(Math.round(number3)); 
+
+const numbers3 = [52, 53, 49, 77, 21, 32];
+
+const minValue = Math.min(...numbers3);
+const maxValue = Math.max(...numbers3);
+
+console.log(minValue); 
+console.log(maxValue); 
