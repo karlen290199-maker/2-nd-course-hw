@@ -638,3 +638,11 @@ function generateRandomArray(n) {
 
 console.log(generateRandomArray(10)); 
 console.log(generateRandomArray(20)); 
+
+function getRandomInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandomInRange(1, 10));
+console.log(getRandomInRange(5, 15));
+console.log(getRandomInRange(-10, 10));
