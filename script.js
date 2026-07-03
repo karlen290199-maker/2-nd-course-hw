@@ -556,3 +556,30 @@ function startArithmetic() {
     }
     alert(resultMessage);
 }
+
+function reverseText() {
+    alert('Добро пожаловать в игру "Переверни текст"!\nВведите любой текст, и я переверну его задом наперёд.');
+    
+    const userText = prompt('Введите текст для переворота:');
+    
+    if (userText === null) {
+        alert('Игра прервана. Вы нажали "Отмена".');
+        return;
+    }
+    
+    if (userText.trim() === '') {
+        alert('Вы не ввели текст. Попробуйте ещё раз.');
+        return;
+    }
+    
+    const reversedText = userText.split('').reverse().join('');
+    
+    alert(`Ваш текст: "${userText}"\nПеревёрнутый текст: "${reversedText}"`);
+    
+    const continueGame = confirm('Хотите перевернуть ещё один текст?');
+    if (continueGame) {
+        reverseText();
+    } else {
+        alert('Спасибо за игру! До свидания!');
+    }
+}
