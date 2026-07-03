@@ -381,8 +381,8 @@ if (arr6.includes(number)) {
     alert('Не угадал');
 }
 
-const str = 'abcdef';
-const reversed = str.split('').reverse().join('');
+const str1 = 'abcdef';
+const reversed = str1.split('').reverse().join('');
 console.log(reversed); 
 
 const arr7 = [[1, 2, 3], [4, 5, 6]];
@@ -583,3 +583,7 @@ function reverseText() {
         alert('Спасибо за игру! До свидания!');
     }
 }
+
+const str2 = 'JS';
+const upperStr = str2.toUpperCase();
+console.log(upperStr); 
