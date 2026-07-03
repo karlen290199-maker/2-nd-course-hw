@@ -630,3 +630,11 @@ function randomNumber() {
 }
 
 randomNumber(); 
+
+function generateRandomArray(n) {
+    const length = Math.floor(n / 2);
+    return Array.from({length}, () => Math.floor(Math.random() * (n + 1)));
+}
+
+console.log(generateRandomArray(10)); 
+console.log(generateRandomArray(20)); 
