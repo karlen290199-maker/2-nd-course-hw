@@ -587,3 +587,25 @@ function reverseText() {
 const str2 = 'JS';
 const upperStr = str2.toUpperCase();
 console.log(upperStr); 
+
+function filterByString(arr, str) {
+    const lowerStr = str.toLowerCase();
+    return arr.filter(item => String(item).toLowerCase().startsWith(lowerStr));
+}
+
+// Обычные повседневные слова
+const words = [
+    'дом', 'дорога', 'друг',
+    'комната', 'кровать', 'компьютер',
+    'смена', 'солнце',
+    'мама', 'музыка',
+    'работа', 'рюкзак', 'радость',
+    'телефон', 'телевизор'  
+];
+
+console.log('Слова на "д":', filterByString(words, 'д'));
+console.log('Слова на "к":', filterByString(words, 'к'));
+console.log('Слова на "с":', filterByString(words, 'с'));
+console.log('Слова на "м":', filterByString(words, 'м'));
+console.log('Слова на "р":', filterByString(words, 'р'));
+console.log('Слова на "т":', filterByString(words, 'т'));
