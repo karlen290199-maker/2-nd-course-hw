@@ -609,3 +609,9 @@ console.log('Слова на "с":', filterByString(words, 'с'));
 console.log('Слова на "м":', filterByString(words, 'м'));
 console.log('Слова на "р":', filterByString(words, 'р'));
 console.log('Слова на "т":', filterByString(words, 'т'));
+
+const number3 = 32.58884;
+
+console.log(Math.floor(number3)); 
+console.log(Math.ceil(number3));  
+console.log(Math.round(number3)); 
