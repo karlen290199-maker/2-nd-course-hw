@@ -655,3 +655,20 @@ const futureDate = new Date(currentDate2);
 futureDate.setDate(currentDate2.getDate() + 73);
 
 console.log(futureDate.toLocaleDateString());
+
+function formatDate(date) {
+    const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+    const weekdays = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+    
+    const d = date.getDate();
+    const m = months[date.getMonth()];
+    const y = date.getFullYear();
+    const w = weekdays[date.getDay()];
+    const h = String(date.getHours()).padStart(2, '0');
+    const min = String(date.getMinutes()).padStart(2, '0');
+    const s = String(date.getSeconds()).padStart(2, '0');
+    
+    return `Дата: ${d} ${m} ${y} — это ${w}.\nВремя: ${h}:${min}:${s}`;
+}
+
+console.log(formatDate(new Date()));
