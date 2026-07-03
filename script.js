@@ -623,3 +623,10 @@ const maxValue = Math.max(...numbers3);
 
 console.log(minValue); 
 console.log(maxValue); 
+
+function randomNumber() {
+    const num = Math.floor(Math.random() * 10) + 1;
+    console.log(num);
+}
+
+randomNumber(); 
