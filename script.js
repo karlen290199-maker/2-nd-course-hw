@@ -646,3 +646,6 @@ function getRandomInRange(min, max) {
 console.log(getRandomInRange(1, 10));
 console.log(getRandomInRange(5, 15));
 console.log(getRandomInRange(-10, 10));
+
+const currentDate = new Date();
+console.log(new Date().toLocaleDateString());
