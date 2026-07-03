@@ -486,3 +486,73 @@ function askQuestion() {
         }
     }
 }
+
+function startArithmetic() {
+    let correctCount = 0;
+    let totalQuestions = 5;
+    
+    alert('Добро пожаловать в игру "Простая арифметика"!\nВам будет предложено 5 примеров.\nПопробуйте решить их правильно!');
+    
+    for (let i = 0; i < totalQuestions; i++) {
+        const num1 = Math.floor(Math.random() * 20) + 1;
+        const num2 = Math.floor(Math.random() * 20) + 1;
+        const operations = ['+', '-', '*', '/'];
+        const operation = operations[Math.floor(Math.random() * operations.length)];
+        
+        let question, correctAnswer;
+        
+        switch(operation) {
+            case '+':
+                question = `${num1} + ${num2}`;
+                correctAnswer = num1 + num2;
+                break;
+            case '-':
+                const bigger = Math.max(num1, num2);
+                const smaller = Math.min(num1, num2);
+                question = `${bigger} - ${smaller}`;
+                correctAnswer = bigger - smaller;
+                break;
+            case '*':
+                const mult1 = Math.floor(Math.random() * 10) + 1;
+                const mult2 = Math.floor(Math.random() * 10) + 1;
+                question = `${mult1} * ${mult2}`;
+                correctAnswer = mult1 * mult2;
+                break;
+            case '/':
+                const divisor = Math.floor(Math.random() * 10) + 1;
+                const quotient = Math.floor(Math.random() * 10) + 1;
+                const dividend = divisor * quotient;
+                question = `${dividend} / ${divisor}`;
+                correctAnswer = quotient;
+                break;
+        }
+        
+        const userInput = prompt(`Вопрос ${i+1} из ${totalQuestions}:\n${question} = ?`);
+        
+        if (userInput === null) {
+            alert('Игра прервана. Вы нажали "Отмена".');
+            return;
+        }
+        
+        const userAnswer = Number(userInput.trim());
+        
+        if (isNaN(userAnswer)) {
+            alert(`Ошибка: "${userInput}" - это не число. Ответ засчитан как неверный.`);
+        } else if (userAnswer === correctAnswer) {
+            alert(`Правильно! ${question} = ${correctAnswer}`);
+            correctCount++;
+        } else {
+            alert(`Неправильно! ${question} = ${correctAnswer}, а вы ввели ${userAnswer}`);
+        }
+    }
+    
+    let resultMessage = `Вы решили правильно ${correctCount} из ${totalQuestions} примеров.`;
+    if (correctCount === totalQuestions) {
+        resultMessage += '\nОтлично! Вы великолепны!';
+    } else if (correctCount >= totalQuestions / 2) {
+        resultMessage += '\nХороший результат!';
+    } else {
+        resultMessage += '\nПопробуйте ещё раз, у вас получится!';
+    }
+    alert(resultMessage);
+}
