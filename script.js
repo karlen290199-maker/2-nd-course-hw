@@ -451,3 +451,38 @@ const average = totalSum / arr10.length;
 console.log('Массив:', arr10);
 console.log('Сумма элементов:', totalSum);
 console.log('Среднее арифметическое:', average);
+
+function askQuestion() {
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+    let guessed = false;
+
+    alert('Я загадал число от 1 до 100. Попробуй угадать!');
+
+    while (!guessed) {
+        const userInput = prompt('Введите число от 1 до 100:');
+        
+        if (userInput === null) {
+            alert('Игра прервана. Вы нажали "Отмена".');
+            return;
+        }
+
+        const guess = Number(userInput.trim());
+        
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+            alert(`Ошибка: "${userInput}" - это не число от 1 до 100. Попробуйте ещё раз.`);
+            continue;
+        }
+
+        attempts++;
+
+        if (guess === secretNumber) {
+            alert(`Поздравляю! Вы угадали число ${secretNumber} за ${attempts} попыток!`);
+            guessed = true;
+        } else if (guess < secretNumber) {
+            alert('Загаданное число БОЛЬШЕ');
+        } else {
+            alert('Загаданное число МЕНЬШЕ');
+        }
+    }
+}
