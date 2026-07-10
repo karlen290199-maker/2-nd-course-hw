@@ -762,3 +762,17 @@ const peopleForFilter = [
 ];
 
 console.log(filter(peopleForFilter, isMale));
+
+let elapsed = 0;
+const interval = 3000;
+const duration = 30000; 
+
+const timerId = setInterval(() => {
+    elapsed += interval;
+    console.log(new Date().toLocaleString());
+    
+    if (elapsed >= duration) {
+        clearInterval(timerId);
+        console.log('30 секунд прошло');
+    }
+}, interval);
