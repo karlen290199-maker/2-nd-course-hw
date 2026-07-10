@@ -672,3 +672,55 @@ function formatDate(date) {
 }
 
 console.log(formatDate(new Date()));
+
+function playGame() {
+    const variants = ['камень', 'ножницы', 'бумага'];
+    
+    alert('Добро пожаловать в игру "Камень, ножницы, бумага"!\nВы играете против компьютера.');
+    
+    let userChoice = prompt('Введите ваш выбор:\nкамень, ножницы или бумага');
+    
+    if (userChoice === null) {
+        alert('Игра прервана. Вы нажали "Отмена".');
+        return;
+    }
+    
+    userChoice = userChoice.trim().toLowerCase();
+    
+    if (!variants.includes(userChoice)) {
+        alert('Ошибка: вы ввели неверный вариант.\nДоступные варианты: камень, ножницы, бумага');
+        return;
+    }
+    
+    const randomIndex = Math.floor(Math.random() * variants.length);
+    const computerChoice = variants[randomIndex];
+    
+    let result;
+    let resultMessage;
+    
+    if (userChoice === computerChoice) {
+        result = 'Ничья';
+        resultMessage = 'Ничья!';
+    } else if (
+        (userChoice === 'камень' && computerChoice === 'ножницы') ||
+        (userChoice === 'ножницы' && computerChoice === 'бумага') ||
+        (userChoice === 'бумага' && computerChoice === 'камень')
+    ) {
+        result = 'Победа';
+        resultMessage = 'Поздравляю! Вы победили!';
+    } else {
+        result = 'Поражение';
+        resultMessage = 'К сожалению, вы проиграли. Попробуйте ещё раз!';
+    }
+    
+    alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${resultMessage}`);
+    
+    const playAgain = confirm('Хотите сыграть ещё раз?');
+    if (playAgain) {
+        playGame();
+    } else {
+        alert('Спасибо за игру! До свидания!');
+    }
+}
+
+playGame();
