@@ -64,7 +64,24 @@ body {
     color: black;
 }
 
- .button-success {
+.button-success {
     background: black;
     box-shadow: 0 4px 10px rgba(16, 185, 129, 0.25);
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin: 20px;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
 }

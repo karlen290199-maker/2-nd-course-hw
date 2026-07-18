@@ -4,6 +4,8 @@ const paragraph = document.querySelector("#colorParagraph");
 const colorBtn = document.querySelector("#changeColorBtn");
 const changeableHeader = document.querySelector("#changeableHeader");
 const changeTextBtn = document.querySelector("#changeTextBtn");
+const changeDescBtn = document.querySelector("#changeDescriptionBtn");
+const resetDescBtn = document.querySelector("#resetDescriptionBtn");
 
 
 button.addEventListener('click', function() {
@@ -36,3 +38,38 @@ const originalHeaderText = changeableHeader.textContent;
         changeTextBtn.textContent = "Изменить текст";
     }, 2000);
 });
+
+const descriptionElements = document.querySelectorAll(".description");
+const originalTexts = Array.from(descriptionElements).map(el => el.textContent);
+
+function changeAllDescriptions() {
+    const descriptions = document.querySelectorAll(".description");
+            
+        descriptions.forEach(function(element, index) {
+            element.textContent = `Измененный текст ${index + 1}`;
+            element.classList.add("changed-text");
+        });
+            
+        changeDescBtn.textContent = "Изменено!";
+            setTimeout(() => {
+                changeDescBtn.textContent = "Изменить все описания";
+        }, 2000);
+    }
+
+function resetDescriptions() {
+    const descriptions = document.querySelectorAll(".description");
+            
+        descriptions.forEach(function(element, index) {
+            element.textContent = originalTexts[index] || `Элемент описания ${index + 1}`;
+            element.classList.remove("changed-text");
+        });
+            
+        resetDescBtn.textContent = "Сброшено!";
+            setTimeout(() => {
+                resetDescBtn.textContent = "Сбросить описания";
+        }, 1500);
+    }
+
+        changeDescBtn.addEventListener("click", changeAllDescriptions);
+        
+        resetDescBtn.addEventListener("click", resetDescriptions);
