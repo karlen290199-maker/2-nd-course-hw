@@ -6,6 +6,8 @@ const changeableHeader = document.querySelector("#changeableHeader");
 const changeTextBtn = document.querySelector("#changeTextBtn");
 const changeDescBtn = document.querySelector("#changeDescriptionBtn");
 const resetDescBtn = document.querySelector("#resetDescriptionBtn");
+const changeMixedBtn = document.querySelector("#changeMixedBtn");
+const resetMixedBtn = document.querySelector("#resetMixedBtn");
 
 
 button.addEventListener('click', function() {
@@ -70,6 +72,39 @@ function resetDescriptions() {
         }, 1500);
     }
 
-        changeDescBtn.addEventListener("click", changeAllDescriptions);
-        
-        resetDescBtn.addEventListener("click", resetDescriptions);
+    changeDescBtn.addEventListener("click", changeAllDescriptions);
+    resetDescBtn.addEventListener("click", resetDescriptions);
+
+const mixedElements = document.querySelectorAll(".mixed-item");
+const originalMixedTexts = Array.from(mixedElements).map(el => el.textContent);
+
+    function changeAllDescriptionsMixed() {
+        const descriptions = document.querySelectorAll(".mixed-item.description");
+            
+            descriptions.forEach(function(element, index) {
+                element.textContent = `Новый текст ${index + 1}`;
+                element.classList.add("changed-text-new");
+            });
+            
+            changeMixedBtn.textContent = "Изменено!";
+            setTimeout(() => {
+                changeMixedBtn.textContent = "Изменить все description";
+            }, 2000);
+        }
+
+    function resetMixedDescriptions() {
+        const allElements = document.querySelectorAll(".mixed-item");
+            
+            allElements.forEach(function(element, index) {
+                element.textContent = originalMixedTexts[index] || `Элемент ${index + 1}`;
+                element.classList.remove("changed-text-new");
+            });
+            
+            resetMixedBtn.textContent = "Сброшено!";
+            setTimeout(() => {
+                resetMixedBtn.textContent = "Сбросить";
+            }, 1500);
+        }
+
+    changeMixedBtn.addEventListener("click", changeAllDescriptionsMixed);
+    resetMixedBtn.addEventListener("click", resetMixedDescriptions);

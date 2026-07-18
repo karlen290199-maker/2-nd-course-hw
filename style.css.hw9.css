@@ -76,7 +76,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5px;
-    margin: 20px;
+    margin: 40px;
 }
 
 .description-container {
@@ -84,4 +84,51 @@ body {
     flex-direction: column;
     gap: 10px;
     margin: 20px 0;
+}
+
+.mixed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.mixed-item {
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.mixed-item.description {
+    background: #e0e7ff;
+    color: black;
+}
+
+.mixed-item.regular {
+    background: #f1f5f9;;
+    color: black;
+}
+
+.mixed-item.highlight {
+    background: #fce4ec;
+    color: black;
+}
+
+.mixed-item.description.changed-text-new {
+    background: #a5b4fc;
+    color: black;
+    font-weight: 600;
+}
+
+.badge {
+    display: inline-block;
+    background: #e2e8f0;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+    margin-left: 8px;
 }
