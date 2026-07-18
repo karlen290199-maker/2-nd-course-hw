@@ -12,6 +12,10 @@ const addBtn = document.querySelector("#addElementBtn");
 const clearBtn = document.querySelector("#clearElementsBtn");
 const dynamicContainer = document.querySelector("#dynamicContainer");
 const counterSpan = document.querySelector("#elementCounter");
+const removeBtn = document.querySelector("#removeBtn");
+const resetRemoveBtn = document.querySelector("#resetRemoveBtn");
+const removeContainer = document.querySelector("#removeContainer");
+const removeCounter = document.querySelector("#removeCounter");
 
 
 button.addEventListener('click', function() {
@@ -153,3 +157,34 @@ document.addEventListener("keydown", function(event) {
         addNewParagraph();
     }
 });
+
+const originalRemoveHTML = removeContainer.innerHTML;
+
+function removeFirstDescription() {
+    const firstDescription = document.querySelector(".description-remove");
+    
+    if (firstDescription) {
+        firstDescription.classList.add("removed");
+        
+        setTimeout(() => {
+            firstDescription.remove();
+            
+            removeBtn.textContent = "Удалено!";
+            setTimeout(() => {
+                removeBtn.textContent = "Удалить первый description";
+            }, 1000);
+        }, 300);
+    }
+}
+
+function resetRemoveElements() {
+    removeContainer.innerHTML = originalRemoveHTML;
+    
+    resetRemoveBtn.textContent = "Восстановлено!";
+    setTimeout(() => {
+        resetRemoveBtn.textContent = "Восстановить все";
+    }, 1500);
+}
+
+removeBtn.addEventListener("click", removeFirstDescription);
+resetRemoveBtn.addEventListener("click", resetRemoveElements);

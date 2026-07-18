@@ -162,3 +162,55 @@ body {
     flex-direction: column;
     gap: 8px;
 }
+
+.description-remove {
+    font-size: 16px;
+    color: #475569;
+    background: #f1f5f9;
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.remove-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.remove-item {
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.remove-item.description-remove {
+    background: #fef2f2;
+}
+
+.remove-item.regular-remove {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.remove-item.removed {
+    animation: removeAnim 0.3s ease forwards;
+}
+
+@keyframes removeAnim {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
