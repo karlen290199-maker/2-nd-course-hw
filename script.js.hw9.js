@@ -8,6 +8,10 @@ const changeDescBtn = document.querySelector("#changeDescriptionBtn");
 const resetDescBtn = document.querySelector("#resetDescriptionBtn");
 const changeMixedBtn = document.querySelector("#changeMixedBtn");
 const resetMixedBtn = document.querySelector("#resetMixedBtn");
+const addBtn = document.querySelector("#addElementBtn");
+const clearBtn = document.querySelector("#clearElementsBtn");
+const dynamicContainer = document.querySelector("#dynamicContainer");
+const counterSpan = document.querySelector("#elementCounter");
 
 
 button.addEventListener('click', function() {
@@ -108,3 +112,44 @@ const originalMixedTexts = Array.from(mixedElements).map(el => el.textContent);
 
     changeMixedBtn.addEventListener("click", changeAllDescriptionsMixed);
     resetMixedBtn.addEventListener("click", resetMixedDescriptions);
+
+let elementCount = 0;
+
+function addNewParagraph() {
+    const newParagraph = document.createElement("p");
+    
+    elementCount++;
+    newParagraph.textContent = `Новый абзац ${elementCount}`;
+    
+    newParagraph.classList.add("dynamic-paragraph");
+    
+    newParagraph.dataset.index = elementCount;
+    
+    dynamicContainer.appendChild(newParagraph);
+    
+    addBtn.textContent = "Добавлено!";
+    setTimeout(() => {
+        addBtn.textContent = "Добавить элемент";
+    }, 1000);
+    
+    newParagraph.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function clearAllElements() {
+    dynamicContainer.innerHTML = "";
+    elementCount = 0;
+    
+    clearBtn.textContent = "Очищено!";
+    setTimeout(() => {
+        clearBtn.textContent = "Очистить все";
+    }, 1500);
+}
+
+addBtn.addEventListener("click", addNewParagraph);
+clearBtn.addEventListener("click", clearAllElements);
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter" && event.ctrlKey) {
+        addNewParagraph();
+    }
+});

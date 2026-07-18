@@ -102,17 +102,14 @@ body {
 }
 
 .mixed-item.description {
-    background: #e0e7ff;
     color: black;
 }
 
 .mixed-item.regular {
-    background: #f1f5f9;;
     color: black;
 }
 
 .mixed-item.highlight {
-    background: #fce4ec;
     color: black;
 }
 
@@ -131,4 +128,37 @@ body {
     font-weight: 600;
     color: black;
     margin-left: 8px;
+}
+
+.dynamic-paragraph {
+    background: #d1fae5;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin: 10px 0;
+    text-align: left;
+    animation: slideIn 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.dynamic-paragraph:hover {
+    transform: translateX(5px);
+}
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+.dynamic-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
