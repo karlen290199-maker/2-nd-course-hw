@@ -52,3 +52,19 @@ body {
     background: black;
     box-shadow: 0 4px 10px rgba(100, 116, 139, 0.2);
 }
+
+.header1 {
+    font-size: 2.5em;
+    color: #333;
+    transition: all 0.3s ease;
+    margin: 20px;
+}
+
+.header.changed {
+    color: black;
+}
+
+ .button-success {
+    background: black;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.25);
+}
