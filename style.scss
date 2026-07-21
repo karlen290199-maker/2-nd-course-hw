@@ -29,6 +29,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 800px;
+    overflow: hidden;
 
     &__cap {
         font-family: Montserrat;
@@ -40,7 +41,7 @@ a {
         font-weight: 700;
         max-width: 769px;
         max-height: 156px;
-        padding-top: 196px;
+        padding-top: 100px;
         padding-bottom: 24px;
         color: #202027;
     }
@@ -79,6 +80,67 @@ a {
         background-color: #FFFFFF;
         color: #202027;
     } 
+}
+
+.games-bar {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    height: 90px;
+    background: #BCEC30;  
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+    top: 710px;
+
+    &__track {
+        overflow: hidden;
+    }
+
+    &__list {
+        display: flex;
+        gap: 138px;
+        animation: scrollGames 18s linear infinite;
+        white-space: nowrap;
+        padding-top: 27px;
+        padding-bottom: 30px;
+    }
+
+    &__item {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 30px;
+        line-height: 110.00000000000001%;
+        letter-spacing: 4%;
+        vertical-align: middle;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 102px;
+    }
+
+    &__item::before {
+        content: "";
+        display: inline-block; 
+        width: 30px; 
+        height: 30px; 
+        background-image: url(image/Star.svg);
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+    }
+}
+
+@keyframes scrollGames {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .img {
