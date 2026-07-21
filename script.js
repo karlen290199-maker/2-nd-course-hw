@@ -785,15 +785,20 @@ delayForSecond(function () {
    console.log('Привет, Глеб!');
 });
 
-function delayForSecond(cb) {
-    setTimeout(() => {
-        console.log('Прошла одна секунда');
-        if(cb) {  cb(); }
-    }, 1000)
+function changeBackgroundColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const color = `rgb(${r}, ${g}, ${b})`;
+    
+    const oldLayer = document.getElementById('color-overlay');
+    if (oldLayer) oldLayer.remove();
+    
+    document.body.style.backgroundColor = color;
+    document.body.style.backgroundImage = 'none';
+    
+    document.querySelectorAll('section').forEach(section => {
+        section.style.backgroundColor = 'transparent';
+        section.style.backgroundImage = 'none';
+    });
 }
-
-function sayHi (name) {
-    console.log(`Привет, ${name}!`);
-}
-
-delayForSecond(() => sayHi('Глеб'));
