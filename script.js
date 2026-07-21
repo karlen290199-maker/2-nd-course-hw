@@ -785,20 +785,64 @@ delayForSecond(function () {
    console.log('Привет, Глеб!');
 });
 
+const colorPalette = [
+    { name: 'Красный', hex: '#FF0000' },
+    { name: 'Тёмно-красный', hex: '#8B0000' },
+    { name: 'Зелёный', hex: '#008000' },
+    { name: 'Тёмно-зелёный', hex: '#006400' },
+    { name: 'Синий', hex: '#0000FF' },
+    { name: 'Тёмно-синий', hex: '#00008B' },
+    { name: 'Жёлтый', hex: '#FFFF00' },
+    { name: 'Оранжевый', hex: '#FFA500' },
+    { name: 'Тёмно-оранжевый', hex: '#FF8C00' },
+    { name: 'Фиолетовый', hex: '#800080' },
+    { name: 'Розовый', hex: '#FFC0CB' },
+    { name: 'Голубой', hex: '#00FFFF' },
+    { name: 'Белый', hex: '#FFFFFF' },
+    { name: 'Чёрный', hex: '#000000' },
+    { name: 'Серый', hex: '#808080' },
+    { name: 'Тёмно-серый', hex: '#A9A9A9' },
+    { name: 'Светло-серый', hex: '#D3D3D3' },
+    { name: 'Бордовый', hex: '#800000' },
+    { name: 'Оливковый', hex: '#808000' },
+    { name: 'Лаймовый', hex: '#00FF00' },
+    { name: 'Бирюзовый', hex: '#40E0D0' },
+    { name: 'Коралловый', hex: '#FF7F50' },
+    { name: 'Золотой', hex: '#FFD700' },
+    { name: 'Серебряный', hex: '#C0C0C0' },
+    { name: 'Салатовый', hex: '#ADFF2F' },
+    { name: 'Небесный', hex: '#87CEEB' },
+    { name: 'Лососевый', hex: '#FA8072' },
+    { name: 'Пурпурный', hex: '#A020F0' },
+    { name: 'Малиновый', hex: '#DC143C' },
+    { name: 'Шоколадный', hex: '#D2691E' },
+    { name: 'Индиго', hex: '#4B0082' },
+    { name: 'Лавандовый', hex: '#E6E6FA' },
+    { name: 'Персиковый', hex: '#FFDAB9' },
+    { name: 'Мятный', hex: '#98FF98' },
+    { name: 'Ванильный', hex: '#F3E5AB' },
+    { name: 'Сирене́вый', hex: '#C8A2C8' },
+    { name: 'Светло-розовый', hex: '#FFB6C1' },
+    { name: 'Тёмно-розовый', hex: '#FF1493' },
+    { name: 'Светло-жёлтый', hex: '#FFFACD' },
+    { name: 'Зелёное яблоко', hex: '#32CD32' },
+    { name: 'Морская волна', hex: '#2E8B57' }
+];
+
 function changeBackgroundColor() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    const color = `rgb(${r}, ${g}, ${b})`;
+    const randomIndex = Math.floor(Math.random() * colorPalette.length);
+    const selectedColor = colorPalette[randomIndex];
     
     const oldLayer = document.getElementById('color-overlay');
     if (oldLayer) oldLayer.remove();
     
-    document.body.style.backgroundColor = color;
+    document.body.style.backgroundColor = selectedColor.hex;
     document.body.style.backgroundImage = 'none';
     
     document.querySelectorAll('section').forEach(section => {
         section.style.backgroundColor = 'transparent';
         section.style.backgroundImage = 'none';
     });
+    
+    alert(`Цвет изменён на: ${selectedColor.name}\n\nКод: ${selectedColor.hex}`);
 }
