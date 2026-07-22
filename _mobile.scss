@@ -1,5 +1,21 @@
 @media (max-width: 768px) {
 
+    .header__btn,
+    .games__btn {
+        background-color: #202027 !important;
+        color: #FFFFFF !important;
+    }
+    
+    .header__btn:hover,
+    .header__btn:active,
+    .header__btn:focus,
+    .games__btn:hover,
+    .games__btn:active,
+    .games__btn:focus {
+        background-color: #202027 !important;
+        color: #FFFFFF !important;
+    }
+
     .visually-hidden {
         position: absolute;
         width: 1px;
@@ -26,8 +42,7 @@
             position: relative;
             text-align: center;
             font-size: 40px;
-            min-height: 196px;
-            padding-top: 147px;
+            max-height: 196px;
             max-width: 296px;
             padding-left: 21px;
         }
@@ -50,11 +65,22 @@
             font-size: 16px;
             margin-left: 30px;
         }
+    }
 
-        &__btn:hover {
-            background-color: #FFFFFF;
-            color: #202027;
-        } 
+    .games-bar {
+        top: 649px;
+
+        &__list {
+            display: flex;
+            gap: 74.13px;
+            padding-top: 16px;
+            padding-bottom: 17px;
+        }
+
+        &__item {
+            font-size: 18px;
+            gap: 54.8px;
+        }
     }
 
     .img {
@@ -240,12 +266,6 @@
                 font-size: 16px;
                 min-width: 285px;
                 min-height: 55px;
-            }
-
-            &__btn:hover {
-                border: 1px solid #202027;
-                background-color: #FFFFFF;
-                color: #202027;
             }
 
             &__cart {
